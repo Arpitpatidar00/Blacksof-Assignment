@@ -2,7 +2,7 @@ services:
   - type: web
     name: blacksof-api
     runtime: node
-    buildCommand: yarn install && yarn build:server
+    buildCommand: yarn install --production=false && yarn build:server
     startCommand: yarn start:server
     envVars:
       - key: NODE_ENV

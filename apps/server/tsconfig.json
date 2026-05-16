@@ -4,6 +4,7 @@
     "module": "commonjs",
     "lib": ["ES2020"],
     "outDir": "./dist",
+    "rootDir": "../..",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -15,7 +16,8 @@
       "@blacksof/types": ["libs/types/src"],
       "@blacksof/utils": ["libs/utils/src"],
       "@blacksof/services": ["libs/services/src"]
-    }
+    },
+    "ignoreDeprecations": "5.0"
   },
   "include": ["src/**/*", "../../libs/*/src/**/*"],
   "exclude": ["node_modules", "dist"]
