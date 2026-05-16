@@ -33,7 +33,7 @@
   },
   "resolutions": {
     "typescript": "5.9.3",
-    "@types/node": "25.8.0",
+    "@types/node": "22.10.2",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "@radix-ui/react-slot": "1.2.3"
