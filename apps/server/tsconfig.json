@@ -11,11 +11,10 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "sourceMap": true,
-    "baseUrl": "../..",
     "paths": {
-      "@blacksof/types": ["libs/types/src"],
-      "@blacksof/utils": ["libs/utils/src"],
-      "@blacksof/services": ["libs/services/src"]
+      "@blacksof/types": ["../../libs/types/src"],
+      "@blacksof/utils": ["../../libs/utils/src"],
+      "@blacksof/services": ["../../libs/services/src"]
     },
     "ignoreDeprecations": "5.0"
   },

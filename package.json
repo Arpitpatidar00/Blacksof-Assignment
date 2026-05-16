@@ -6,14 +6,14 @@
     "libs/*"
   ],
   "scripts": {
-    "web": "yarn workspace web",
-    "server": "yarn workspace server",
+    "web": "yarn workspace @blacksof/web",
+    "server": "yarn workspace @blacksof/server",
     "dev": "npx concurrently \"yarn web dev\" \"yarn server dev\"",
     "build": "yarn build:web && yarn build:server",
-    "build:web": "yarn workspace web build",
-    "build:server": "yarn workspace server build",
-    "start:server": "yarn workspace server start",
-    "start:web": "yarn workspace web start",
+    "build:web": "yarn workspace @blacksof/web build",
+    "build:server": "yarn workspace @blacksof/server build",
+    "start:server": "yarn workspace @blacksof/server start",
+    "start:web": "yarn workspace @blacksof/web start",
     "start": "yarn build && npx concurrently \"yarn start:web\" \"yarn start:server\""
   },
   "devDependencies": {
