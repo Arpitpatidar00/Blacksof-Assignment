@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "commonjs",
+    "moduleResolution": "node",
     "lib": ["ES2020"],
+    "types": ["node", "express", "multer", "cors", "morgan", "compression"],
     "outDir": "./dist",
     "rootDir": "../..",
     "strict": true,
@@ -12,12 +14,10 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "paths": {
-      "@blacksof/types": ["../../libs/types/src"],
-      "@blacksof/utils": ["../../libs/utils/src"],
-      "@blacksof/services": ["../../libs/services/src"]
+      "@blacksof/types": ["../../libs/types/src"]
     },
     "ignoreDeprecations": "5.0"
   },
-  "include": ["src/**/*", "../../libs/*/src/**/*"],
+  "include": ["src/**/*", "../../libs/types/src/**/*"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,5 +1,5 @@
 import { env } from "./config/env";
-import express, { RequestHandler } from "express";
+import express, { Request, Response, RequestHandler } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import compression from "compression";
@@ -29,12 +29,12 @@ app.use("/api/features", featureRoutes);
 app.use("/api/demo", demoRoutes);
 
 // Health check
-app.get("/health", (req, res) => {
+app.get("/health", (req: Request, res: Response) => {
   res.status(200).json({ status: "UP", timestamp: new Date().toISOString() });
 });
 
 // Root route
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   res.send("Blacksof Monorepo API Server v1.0.0");
 });
 

@@ -22,7 +22,7 @@ const envSchema = z.object({
   ADMIN_EMAIL: z.string().email("ADMIN_EMAIL must be a valid email"),
   SMTP_HOST: z.string().min(1, "SMTP Host is required"),
   SMTP_PORT: z.string().default("587"),
-  SMTP_SECURE: z.string().transform((val) => val === "true"),
+  SMTP_SECURE: z.string().transform((val: string) => val === "true"),
   SMTP_USER: z.string().optional(),
   SMTP_PASS: z.string().optional(),
 });
@@ -31,7 +31,7 @@ export type Env = z.infer<typeof envSchema>;
 
 const formatErrors = (errors: z.ZodError) => {
   return errors.issues
-    .map((issue) => `  - ${issue.path.join(".")}: ${issue.message}`)
+    .map((issue: z.ZodIssue) => `  - ${issue.path.join(".")}: ${issue.message}`)
     .join("\n");
 };
 
