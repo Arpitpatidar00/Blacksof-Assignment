@@ -16,7 +16,7 @@
     "paths": {
       "@blacksof/types": ["../../libs/types/src"]
     },
-    "ignoreDeprecations": "5.0"
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src/**/*", "../../libs/types/src/**/*"],
   "exclude": ["node_modules", "dist"]
