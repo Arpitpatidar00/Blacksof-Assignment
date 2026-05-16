@@ -10,8 +10,8 @@
     "server": "yarn workspace @blacksof/server",
     "dev": "npx concurrently \"yarn web dev\" \"yarn server dev\"",
     "build": "yarn build:web && yarn build:server",
-    "build:web": "yarn workspace @blacksof/web build",
-    "build:server": "yarn workspace @blacksof/server build",
+    "build:web": "yarn install --production=false && yarn workspace @blacksof/web build",
+    "build:server": "yarn install --production=false && yarn workspace @blacksof/server build",
     "start:server": "yarn workspace @blacksof/server start",
     "start:web": "yarn workspace @blacksof/web start",
     "start": "yarn build && npx concurrently \"yarn start:web\" \"yarn start:server\""
