@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@blacksof/types": ["libs/types/src"],
+      "@blacksof/utils": ["libs/utils/src"],
+      "@blacksof/services": ["libs/services/src"]
+    },
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "target": "ESNext"
+  },
+  "exclude": ["node_modules"]
+}
