@@ -22,10 +22,23 @@ const request = async <T>(
     headers["Content-Type"] = "application/json";
   }
 
-  const response = await fetch(`${baseUrl}${endpoint}`, {
-    ...options,
-    headers,
-  });
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+  let response: Response;
+  try {
+    response = await fetch(`${baseUrl}${endpoint}`, {
+      ...options,
+      headers,
+      signal: controller.signal,
+    });
+  } catch (error) {
+    throw new Error(error instanceof Error && error.name === 'AbortError' 
+      ? 'Request timed out' 
+      : 'Network request failed');
+  } finally {
+    clearTimeout(timeoutId);
+  }
 
   const result = (await response.json()) as ApiResponse<T>;
   const method = options.method?.toUpperCase() || "GET";
