@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { FeatureController } from "../controllers/feature.controller";
-import { featureValidationRules } from "../validations/feature.validation";
-import { validate } from "../middlewares/validate.middleware";
-import { upload } from "../config/storage";
+import { FeatureController } from "../controllers/feature.controller.js";
+import { featureValidationRules } from "../validations/feature.validation.js";
+import { validate } from "../middlewares/validate.middleware.js";
+import { upload } from "../config/storage.js";
 import { RequestHandler } from "express";
-import { parseFormMiddleware } from "../middlewares/parse.middleware";
+import { parseFormMiddleware } from "../middlewares/parse.middleware.js";
 
 const router = Router();
 const controller = new FeatureController();

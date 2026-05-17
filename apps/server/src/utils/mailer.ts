@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import { env } from "../config/env";
+import { env } from "../config/env.js";
 
 export const createTransporter = async () => {
   if (env.SMTP_HOST && env.SMTP_USER) {

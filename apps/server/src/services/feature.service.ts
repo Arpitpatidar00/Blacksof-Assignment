@@ -1,6 +1,6 @@
 import { FeatureCard } from "@blacksof/types";
-import FeatureModel from "../models/feature.model";
-import { cloudinary } from "../config/storage";
+import FeatureModel from "../models/feature.model.js";
+import { cloudinary } from "../config/storage.js";
 
 export class FeatureBackendService {
   private async deleteFileFromUrl(url: string) {

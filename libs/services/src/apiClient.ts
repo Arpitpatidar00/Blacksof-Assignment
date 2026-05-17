@@ -1,7 +1,7 @@
 import { ApiResponse } from "@blacksof/types";
 import { toast } from "sonner";
 
-const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";
 
 /** Shared body type for mutation methods (POST/PUT) */
 type RequestBody = Record<string, unknown> | FormData;

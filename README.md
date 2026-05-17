@@ -96,7 +96,7 @@ This project enforces professional standards via the `.agent` config:
 ## 📦 Deployment
 
 - **Frontend**: Vercel (Optimized for `standalone` output).
-- **Backend**: Render (Configured via `render.yaml`).
+- **Backend**: Vercel (Deployed as Serverless Functions).
 
 ---
 

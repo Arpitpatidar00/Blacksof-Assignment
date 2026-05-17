@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
-import { AppError } from "../utils/errors";
-import { HttpStatus } from "../utils/responseHandler";
-import { cloudinary } from "../config/storage";
+import { AppError } from "../utils/errors.js";
+import { HttpStatus } from "../utils/responseHandler.js";
+import { cloudinary } from "../config/storage.js";
 
 // Helper to safely extract public_id and delete from Cloudinary
 const cleanupFailedUploads = async (req: Request) => {

@@ -1,5 +1,5 @@
 import { Response, Request, NextFunction } from "express";
-import { HttpStatus } from "./responseHandler";
+import { HttpStatus } from "./responseHandler.js";
 
 export class AppError extends Error {
   public readonly statusCode: number;

@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
-import { BaseController, HttpStatus } from "../utils/responseHandler";
-import { FeatureBackendService } from "../services/feature.service";
-import { asyncHandler, AppError } from "../utils/errors";
+import { BaseController, HttpStatus } from "../utils/responseHandler.js";
+import { FeatureBackendService } from "../services/feature.service.js";
+import { asyncHandler, AppError } from "../utils/errors.js";
 
 export class FeatureController extends BaseController {
   private featureService: FeatureBackendService;

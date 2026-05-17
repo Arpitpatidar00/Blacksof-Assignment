@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { BaseController, HttpStatus } from "../utils/responseHandler";
-import { asyncHandler, AppError } from "../utils/errors";
-import { createTransporter } from "../utils/mailer";
+import { BaseController, HttpStatus } from "../utils/responseHandler.js";
+import { asyncHandler, AppError } from "../utils/errors.js";
+import { createTransporter } from "../utils/mailer.js";
 import nodemailer from "nodemailer";
 
 export class DemoController extends BaseController {
