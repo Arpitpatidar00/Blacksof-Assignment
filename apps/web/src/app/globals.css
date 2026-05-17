@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* ================================================================
+   DEJOULE DESIGN SYSTEM — Global CSS Variables & Tokens
+   Extracted from Figma: Dejoule Development Assignment
+   ================================================================ */
+
+@theme inline {
+  /* ── Colors ── */
+  --color-primary: #ca3604;
+  --color-primary-hover: #a82d03;
+  --color-foreground: #1b1b1b;
+  --color-background: #ffffff;
+  --color-muted: #676767;
+  --color-muted-foreground: #565656;
+  --color-card-foreground: #000000;
+  --color-card-body: #060606;
+  --color-accordion-text: #333333;
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-footer-link: rgba(0, 0, 0, 0.6);
+  --color-footer-text: rgba(27, 27, 27, 0.7);
+  --color-border-peach: #ffd4c5;
+  --color-surface-glass: rgba(255, 255, 255, 0.61);
+
+  /* ── Font Families ── */
+  --font-heading: var(--font-work-sans), "Work Sans", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+  --font-logo: var(--font-poppins), "Poppins", sans-serif;
+}
+
+/* ── Gradients (can't be in @theme) ── */
+:root {
+  --gradient-card: linear-gradient(144.91deg, #ffffff 39.98%, #e7ecf2 80.84%);
+  --gradient-footer: linear-gradient(
+    179deg,
+    rgba(250, 251, 252, 1) 0%,
+    rgba(240, 243, 247, 1) 100%
+  );
+  --gradient-cta-btn: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 5%,
+    rgba(194, 205, 216, 1) 95%
+  );
+  --gradient-cta-text: linear-gradient(90deg, #ca3604 0%, #000000 91%);
+  --gradient-see-how: linear-gradient(
+    179deg,
+    rgba(255, 237, 231, 0.2) 19%,
+    rgba(255, 237, 231, 1) 100%
+  );
+  --gradient-hero-fade-bottom: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 37%
+  );
+  --gradient-hero-fade-top: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 18%,
+    rgba(255, 255, 255, 1) 52%
+  );
+
+  /* ── Shadows ── */
+  --shadow-card:
+    8px 5px 13px 6px rgba(0, 0, 0, 0.01),
+    inset 0px 2px 20.1px 0px rgba(222, 222, 222, 0.3);
+  --shadow-image: 0px 3.92px 19.46px 0px rgba(0, 0, 0, 0.25);
+  --shadow-see-how:
+    inset 0px 2px 8px 0px rgba(222, 222, 222, 0.3),
+    inset 0px 4px 11.1px 6px rgba(202, 54, 4, 0.14);
+  --shadow-cta-btn:
+    0px -0.87px 2.61px 0px rgba(0, 0, 0, 0.05),
+    inset 0px -1.74px 3.48px 0px rgba(0, 0, 0, 0.1),
+    inset 0px 3.48px 13.05px 0px rgba(248, 240, 224, 1);
+  --shadow-panel: -6px 0px 35px 0px rgba(0, 0, 0, 0.07);
+}
+
+/* ================================================================
+   BASE STYLES
+   ================================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================================================
+   TYPOGRAPHY UTILITIES
+   ================================================================ */
+
+.text-gradient-cta {
+  background: var(--gradient-cta-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ================================================================
+   COMPONENT UTILITIES
+   ================================================================ */
+
+.card-gradient {
+  background: var(--gradient-card);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(1px);
+}
+
+.see-how-btn {
+  background: var(--gradient-see-how);
+  box-shadow: var(--shadow-see-how);
+  backdrop-filter: blur(1px);
+}
+
+.cta-btn {
+  background: var(--gradient-cta-btn);
+  box-shadow: var(--shadow-cta-btn);
+}
+
+.cta-section-bg {
+  backdrop-filter: blur(55px);
+}
+
+.image-shadow {
+  box-shadow: var(--shadow-image);
+}
+
+.panel-glass {
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border-peach);
+  box-shadow: var(--shadow-panel);
+}
